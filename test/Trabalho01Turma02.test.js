@@ -334,6 +334,32 @@ describe("Testes da classe Biblioteca", () => {
     });
   });
 
+  test("Teste de atualizar livro que não existe", () => {
+    biblioteca.adicionarLivro({
+      emprestado: false,
+      id: 1,
+      titulo: "Mais esperto que o Diabo",
+      autor: "JK Rowling",
+      genero: "Mágia",
+    });
+
+    biblioteca.atualizarInformacaoLivro(2, {
+      emprestado: false,
+      id: 2,
+      titulo: "Mais esperto que o Diabo",
+      autor: "Napoleão Hill",
+      genero: "Mágia",
+    });
+
+    expect(biblioteca.buscarLivroPorId(1)).toEqual({
+      emprestado: false,
+      id: 1,
+      titulo: "Mais esperto que o Diabo",
+      autor: "JK Rowling",
+      genero: "Mágia",
+    });
+  });
+
   test("Teste de listar livros por ano", () => {
     biblioteca.adicionarLivro({
       ano: 2020,
