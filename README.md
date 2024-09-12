@@ -8,6 +8,9 @@ Projeto de avaliação desenvolvido na matéria de Testes Automatizados da 6° F
 - Javascript - Linguagem base para desenvolvimento da classe disponibilizada pelo professor.
 - Jest - Framework Javascript utilizado para o desenvolvimento dos testes unitários.
 
+## Requisitos
+- Node - Versão 20.15.1 ou superior
+
 ## Executando o Projeto
 - Clonar o repositório
 ```bash copy
