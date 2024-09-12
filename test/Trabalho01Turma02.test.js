@@ -7,7 +7,7 @@ describe("Testes da classe Biblioteca", () => {
     biblioteca = new Biblioteca();
   });
 
-  test("Teste de adicionar livro da biblioteca", () => {
+  test("Teste de adicionar livro na biblioteca", () => {
     biblioteca.adicionarLivro({ id: 1, titulo: "Mais esperto que o Diabo" });
 
     expect(biblioteca.buscarLivroPorId(1)).toEqual({
@@ -32,7 +32,7 @@ describe("Testes da classe Biblioteca", () => {
     ]);
   });
 
-  test("Teste de buscar livro por titulo da biblioteca", () => {
+  test("Teste de buscar livro por titulo na biblioteca", () => {
     biblioteca.adicionarLivro({ id: 1, titulo: "Mais esperto que o Diabo" });
 
     expect(biblioteca.buscarLivroPorTitulo("Mais esperto que o Diabo")).toEqual(
@@ -51,7 +51,7 @@ describe("Testes da classe Biblioteca", () => {
       id: 2,
       titulo: "Harry Potter e Pedra Filosofal",
     });
-    biblioteca.adicionarLivro({ id: 3, titulo: "Pensa e Cresça" });
+    biblioteca.adicionarLivro({ id: 3, titulo: "Pense e Cresça" });
 
     expect(biblioteca.listarLivros()).toEqual([
       { id: 1, titulo: "Mais esperto que o Diabo" },
@@ -59,7 +59,7 @@ describe("Testes da classe Biblioteca", () => {
         id: 2,
         titulo: "Harry Potter e Pedra Filosofal",
       },
-      { id: 3, titulo: "Pensa e Cresça" },
+      { id: 3, titulo: "Pense e Cresça" },
     ]);
   });
 
@@ -99,7 +99,7 @@ describe("Testes da classe Biblioteca", () => {
       id: 2,
       titulo: "Harry Potter e Pedra Filosofal",
     });
-    biblioteca.adicionarLivro({ id: 3, titulo: "Pensa e Cresça" });
+    biblioteca.adicionarLivro({ id: 3, titulo: "Pense e Cresça" });
 
     expect(biblioteca.emprestarLivro(1, 3)).toEqual(true);
   });
@@ -114,7 +114,7 @@ describe("Testes da classe Biblioteca", () => {
       id: 2,
       titulo: "Harry Potter e Pedra Filosofal",
     });
-    biblioteca.adicionarLivro({ id: 3, titulo: "Pensa e Cresça" });
+    biblioteca.adicionarLivro({ id: 3, titulo: "Pense e Cresça" });
 
     expect(biblioteca.emprestarLivro(5, 2)).toEqual(false);
   });
@@ -129,7 +129,7 @@ describe("Testes da classe Biblioteca", () => {
       id: 2,
       titulo: "Harry Potter e Pedra Filosofal",
     });
-    biblioteca.adicionarLivro({ id: 3, titulo: "Pensa e Cresça" });
+    biblioteca.adicionarLivro({ id: 3, titulo: "Pense e Cresça" });
 
     biblioteca.emprestarLivro(1, 3);
 
@@ -146,7 +146,7 @@ describe("Testes da classe Biblioteca", () => {
       id: 2,
       titulo: "Harry Potter e Pedra Filosofal",
     });
-    biblioteca.adicionarLivro({ id: 3, titulo: "Pensa e Cresça" });
+    biblioteca.adicionarLivro({ id: 3, titulo: "Pense e Cresça" });
 
     biblioteca.emprestarLivro(1, 3);
 
@@ -163,7 +163,7 @@ describe("Testes da classe Biblioteca", () => {
       id: 2,
       titulo: "Harry Potter e Pedra Filosofal",
     });
-    biblioteca.adicionarLivro({ id: 3, titulo: "Pensa e Cresça" });
+    biblioteca.adicionarLivro({ id: 3, titulo: "Pense e Cresça" });
 
     biblioteca.emprestarLivro(1, 3);
     biblioteca.emprestarLivro(2, 3);
@@ -182,7 +182,7 @@ describe("Testes da classe Biblioteca", () => {
         idMembro: 3,
         titulo: "Harry Potter e Pedra Filosofal",
       },
-      { emprestado: true, id: 3, idMembro: 2, titulo: "Pensa e Cresça" },
+      { emprestado: true, id: 3, idMembro: 2, titulo: "Pense e Cresça" },
     ]);
   });
 
@@ -204,14 +204,14 @@ describe("Testes da classe Biblioteca", () => {
     biblioteca.adicionarLivro({
       emprestado: false,
       id: 3,
-      titulo: "Pensa e Cresça",
+      titulo: "Pense e Cresça",
     });
 
     biblioteca.emprestarLivro(1, 3);
     biblioteca.emprestarLivro(2, 3);
 
     expect(biblioteca.listarLivrosDisponiveis()).toEqual([
-      { emprestado: false, id: 3, titulo: "Pensa e Cresça" },
+      { emprestado: false, id: 3, titulo: "Pense e Cresça" },
     ]);
   });
 
@@ -229,7 +229,7 @@ describe("Testes da classe Biblioteca", () => {
     biblioteca.adicionarLivro({
       emprestado: false,
       id: 3,
-      titulo: "Pensa e Cresça",
+      titulo: "Pense e Cresça",
     });
 
     expect(biblioteca.contarLivros()).toEqual(3);
@@ -260,7 +260,7 @@ describe("Testes da classe Biblioteca", () => {
     biblioteca.adicionarLivro({
       emprestado: false,
       id: 3,
-      titulo: "Pensa e Cresça",
+      titulo: "Pense e Cresça",
       autor: "Napoleão Hill",
     });
 
@@ -292,7 +292,7 @@ describe("Testes da classe Biblioteca", () => {
     biblioteca.adicionarLivro({
       emprestado: false,
       id: 3,
-      titulo: "Pensa e Cresça",
+      titulo: "Pense e Cresça",
       autor: "Napoleão Hill",
       genero: "Desenvolvimento Pessoal",
     });
@@ -355,7 +355,7 @@ describe("Testes da classe Biblioteca", () => {
       ano: 2020,
       emprestado: false,
       id: 3,
-      titulo: "Pensa e Cresça",
+      titulo: "Pense e Cresça",
       autor: "Napoleão Hill",
       genero: "Desenvolvimento Pessoal",
     });
@@ -375,7 +375,7 @@ describe("Testes da classe Biblioteca", () => {
         emprestado: false,
         genero: "Desenvolvimento Pessoal",
         id: 3,
-        titulo: "Pensa e Cresça",
+        titulo: "Pense e Cresça",
       },
     ]);
   });
