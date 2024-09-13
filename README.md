@@ -2,7 +2,7 @@
 Thiago Dimon Miranda
 
 ## Sobre o Projeto
-Projeto de avaliação desenvolvido na matéria de Testes Automatizados da 6° Fase de Engenharia de Software na UNISATC. </br> </br> O projeto tem por objetivo desenvolver testes unitários para uma classe **Biblioteca** que possui vários métodos, dentre eles: **adicionarLivro(), listarLivros(), removerLivro(), adicionarMembro(), listarMembros(), removerMembro(), emprestarLivro(), devolverLivro()** e entre outros.
+Projeto de avaliação desenvolvido na matéria de Automação de Testes da 6° Fase de Engenharia de Software na UNISATC. </br> </br> O projeto tem por objetivo desenvolver testes unitários para uma classe **Biblioteca** que possui vários métodos, dentre eles: **adicionarLivro(), listarLivros(), removerLivro(), adicionarMembro(), listarMembros(), removerMembro(), emprestarLivro(), devolverLivro()** e entre outros.
 
 ## Tecnologias Utilizadas
 - Javascript - Linguagem base para desenvolvimento da classe disponibilizada pelo professor.
